@@ -1,0 +1,24 @@
+server:
+  servlet:
+    context-path: ${ROOT_PATH:/room-occupancy-manager}
+
+spring:
+  application:
+    name: room-occupancy-manager
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+    mapper:
+      allow-coercion-of-scalars: false
+    serialization:
+      write-dates-as-timestamps: false
+      indent_output: true
+    deserialization:
+      fail-on-unknown-properties: false
+      accept-float-as-int: false
+    default-property-inclusion: NON_NULL
+
+springdoc:
+  api-docs:
+    enabled: ${SWAGGER_ENABLED:false}
+  swagger-ui:
+    enabled: ${SWAGGER_ENABLED:false}
