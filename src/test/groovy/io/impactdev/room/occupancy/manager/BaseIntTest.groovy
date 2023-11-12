@@ -6,12 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment
 import org.springframework.boot.test.web.server.LocalServerPort
-import org.springframework.test.context.ActiveProfiles
 import spock.lang.Specification
 
-@ActiveProfiles("test")
 @SpringBootTest(classes = RoomOccupancyManagerApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
-class BaseIntTest extends Specification {
+abstract class BaseIntTest extends Specification {
 
     @LocalServerPort
     private Integer port

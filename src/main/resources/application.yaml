@@ -1,6 +1,6 @@
 server:
   servlet:
-    context-path: ${ROOT_PATH:/room-occupancy-manager}
+    context-path: /room-occupancy-manager
 
 spring:
   application:
@@ -16,9 +16,3 @@ spring:
       fail-on-unknown-properties: false
       accept-float-as-int: false
     default-property-inclusion: NON_NULL
-
-springdoc:
-  api-docs:
-    enabled: ${SWAGGER_ENABLED:false}
-  swagger-ui:
-    enabled: ${SWAGGER_ENABLED:false}
