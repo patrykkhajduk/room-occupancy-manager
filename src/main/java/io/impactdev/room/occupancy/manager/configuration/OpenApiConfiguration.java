@@ -17,7 +17,7 @@ public class OpenApiConfiguration {
     }
 
     @Bean
-    public OpenAPI openAPI(@Value("${server.servlet.context-path}") String contextPath) {
+    public OpenAPI openApi(@Value("${server.servlet.context-path}") String contextPath) {
         return new OpenAPI().addServersItem(new Server().url(contextPath));
     }
 }
